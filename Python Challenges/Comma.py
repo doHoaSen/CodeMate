@@ -11,5 +11,3 @@ elif len(num) < 20:
     print(format(int(num), ","))
 else:
     print("숫자가 너무 큽니다. 프로그램을 종료합니다.")
-
-help('FORMATTING')

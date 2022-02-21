@@ -31,3 +31,4 @@ A <group> value using an underscore (_) may also be specified with the *binary, 
 '0xae12_3fcc_8ab2'
 ```
 
+* For more information: [Python Docs FORMATTING](https://realpython.com/python-formatted-output/#the-group-subcomponent, "link to formatting python docs")
