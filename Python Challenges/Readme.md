@@ -32,3 +32,70 @@ A <group> value using an underscore (_) may also be specified with the *binary, 
 ```
 
 * For more information: [Python Docs FORMATTING](https://realpython.com/python-formatted-output/#the-group-subcomponent, "link to formatting python docs")
+
+
+
+## DistanceofAlphabet.py
+I learned **map()** while programming 'DistanceofAlphabet.py'.
+
+Python’s map() is a built-in function that allows you to __process and transform all the items in an iterable without using an explicit for loop__, a technique commonly known as _mapping_. map() is useful when you need to apply a transformation function to each item in an iterable and transform them into a new iterable. map() is one of the tools that support a functional programming style in Python.
+
+### Understanding map()
+map() loops over the items of an input iterable (or iterables) and returns an iterator that results from applying a transformation function to every item in the original input iterable.
+
+map() takes a function object and an iterable (or multiple iterables) as arguments and returns an iterator that yields transformed items on demand.
+
+```Python
+map(function, iterable[, iterable1, iterable2,..., iterableN])
+```
+
+- Function can be any Python function that takes a number of arguments equal to the number of iterables you pass to map().
+
+This **first argument** to map() is a **transformation** function. In other words, it’s the function that transforms each original item into a new (transformed) item.
+
+
+Suppose you need to take a list of numeric values and transform it into a list containing the square value of every number in the original list.
+
+```Python
+>>> def square(number):
+...     return number ** 2
+...
+
+>>> numbers = [1, 2, 3, 4, 5]
+
+>>> squared = map(square, numbers)
+
+>>> list(squared)
+[1, 4, 9, 16, 25]
+```
+
+- c.f. Lambda functions are quite useful when it comes to using map(). 
+
+Examples Using map()
+```Python
+>>> string_it = ["processing", "strings", "with", "map"]
+>>> list(map(str.capitalize, string_it))
+['Processing', 'Strings', 'With', 'Map']
+
+>>> list(map(str.upper, string_it))
+['PROCESSING', 'STRINGS', 'WITH', 'MAP']
+
+>>> list(map(str.lower, string_it))
+['processing', 'strings', 'with', 'map']
+```
+
+```Python
+>>> def powers(x):
+...     return x ** 2, x ** 3
+...
+
+>>> numbers = [1, 2, 3, 4]
+
+>>> list(map(powers, numbers))
+[(1, 1), (4, 8), (9, 27), (16, 64)]
+
+>>> # Convert to integer
+>>> list(map(int, ["12", "3", "-15"]))
+[12, 3, -15]
+```
+
